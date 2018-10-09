@@ -6,19 +6,17 @@ public class ProgrammerBook extends Book{
 	private String language;  
 	private int level;
 	
-	public int GetLevel()
-	{
-		return level;
-	}
+	public int getLevel(){ return level; }
 	
-	public String GetLanguage()
-	{
-		return language;
-	}
+	public void setLevel(int level) { this.level = level; }
 	
-	public ProgrammerBook(String title,String author, int price,String language,int level) 
+	public String getLanguage(){ return language; }
+	
+	public void setLanguage(String language){ this.language = language; }
+	
+	public ProgrammerBook(String title,String author, int price,int isbn,String language,int level) 
 	{
-		super(title, author, price);
+		super(title, author, price,isbn);
 		this.language = language;
 		this.level = level;		
 	}
@@ -42,7 +40,7 @@ public class ProgrammerBook extends Book{
             return false;
 		ProgrammerBook book = (ProgrammerBook) obj;
         return (super.equals(obj)) && (level == book.level)
-        		&& (language == book.language || (language != null && language.equals(book.GetLanguage())));
+        		&& (language == book.language || (language != null && language.equals(book.getLanguage())));
 	}
 	
 	@Override
