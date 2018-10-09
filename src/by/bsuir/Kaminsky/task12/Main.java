@@ -3,6 +3,7 @@ package by.bsuir.Kaminsky.task12;
 import java.util.ArrayList;
 
 public class Main {
+	
 	public static void main(String... args)
 	{
 		Book book = new Book("Война и мир","Толстой Л.Н", 220,4);
@@ -23,7 +24,8 @@ public class Main {
 		books.sort(null);
 		for (Book book1 : books) {
 			System.out.println(book1.toString());
-		}
+		}	
 		
+		//Comparator
 	}
 }
