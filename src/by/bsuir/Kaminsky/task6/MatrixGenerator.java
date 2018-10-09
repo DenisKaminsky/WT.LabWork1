@@ -22,7 +22,9 @@ public class MatrixGenerator {
 	public static void PrintMatrix(double[][] array)
 	{
 		int width = array.length;
-		int height = array[0].length;
+		int height = 0;
+		if (width != 0)
+			height = array[0].length;
 		for (int i = 0; i< height; i++)
 		{
 			for (int j = 0; j<width;j++)

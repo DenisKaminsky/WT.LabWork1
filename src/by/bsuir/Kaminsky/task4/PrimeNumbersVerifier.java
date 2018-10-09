@@ -17,7 +17,7 @@ public class PrimeNumbersVerifier {
         return true;
 	}
 	
-	public static ArrayList<Integer> FindSimpleNumberIndex(int[] mass)
+	public static ArrayList<Integer> FindPrimeNumberIndex(int[] mass)
 	{
 		ArrayList<Integer> result = new ArrayList<>();
         for (int i = 0; i < mass.length; i++){
@@ -30,7 +30,7 @@ public class PrimeNumbersVerifier {
 	
 	public static void main(String ... args){
         int[] mass = new int[] {1,2,3,4,5,6,7,8,9,10,11};
-        ArrayList<Integer> list = FindSimpleNumberIndex(mass);
+        ArrayList<Integer> list = FindPrimeNumberIndex(mass);
         System.out.println(list);
 	}
 }
