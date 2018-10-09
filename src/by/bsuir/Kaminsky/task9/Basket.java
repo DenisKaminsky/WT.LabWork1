@@ -12,6 +12,10 @@ public final class Basket {
 		this.capacity = capacity;
 		balls = new ArrayList<Ball>();
 	}
+	public int GetBallsCount()
+	{
+		return balls.size();
+	}
 	
 	public double GetWeight()
 	{
@@ -41,7 +45,7 @@ public final class Basket {
 	
 	public boolean Add(Ball ball)
 	{
-		if (!IsFull())
+		if (ball != null && !IsFull())
 		{
 			balls.add(ball);
 			return true;
