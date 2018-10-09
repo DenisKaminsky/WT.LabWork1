@@ -22,8 +22,7 @@ class ComparableTest {
 		assertEquals(3, books.size());
 		assertTrue(books.get(0) == b2);
 		assertTrue(books.get(1) == b1);
-		assertTrue(books.get(2) == b3);
-		
+		assertTrue(books.get(2) == b3);		
 	}
 	
 	@Test

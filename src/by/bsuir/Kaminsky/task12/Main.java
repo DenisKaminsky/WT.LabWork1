@@ -24,8 +24,6 @@ public class Main {
 		books.sort(null);
 		for (Book book1 : books) {
 			System.out.println(book1.toString());
-		}	
-		
-		//Comparator
+		}
 	}
 }
