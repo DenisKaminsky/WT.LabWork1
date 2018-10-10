@@ -1,13 +1,15 @@
-package by.bsuir.Kaminsky.task12;
+package by.bsuir.Kaminsky.task14_2;
 
+import java.util.ArrayList;
+
+import by.bsuir.Kaminsky.task12.Book;
 import reader.ConsoleReader;
 
 public class Main {
-	
 	public static void main(String... args)
 	{
-		Book[] books = new Book[2];
-		for (int i = 0; i < 2; i++) {
+		ArrayList<Book> books = new ArrayList<Book>();
+		for (int i = 0; i < 3; i++) {
 			System.out.println("Book"+(i+1)+": ");
 			System.out.print("Input title: ");
 			String title = ConsoleReader.GetString();
@@ -17,15 +19,13 @@ public class Main {
 			Integer price = ConsoleReader.GetPostitveInteger();
 			System.out.print("Input serial number(isbn): ");
 			Integer isbn = ConsoleReader.GetPostitveInteger();
-			books[i] = new Book(title,author,price,isbn);
+			books.add(new Book(title,author,price,isbn));
 			System.out.println();
 			}		
 		
-		System.out.println("Your books: ");
-		System.out.println(books[0].toString());
-		System.out.println("Hash: "+books[0].hashCode());		
-		System.out.println(books[1].toString());
-		System.out.println("Hash: "+books[1].hashCode());
-		System.out.println(books[0].equals(books[1]));		
+		books.sort(null);
+		for (Book book : books) {
+			System.out.println(book.toString());
+		}
 	}
 }

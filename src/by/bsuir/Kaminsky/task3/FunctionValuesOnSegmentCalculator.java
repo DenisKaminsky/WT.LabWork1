@@ -20,11 +20,4 @@ public class FunctionValuesOnSegmentCalculator {
 		}		
 		return map;		
 	}
-	
-	public static void main(String ... args){
-	        Map<Double, Double> map = CalculateValuesOnSegment(-5, 5,0.5);
-	        int count =  map.size();
-	        for (int i = 0; i<count;i++)
-	        	System.out.println(map.values().toArray()[i]);	
-	}
 }

@@ -1,6 +1,5 @@
 package by.bsuir.Kaminsky.task9;
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 public final class Basket {
@@ -30,7 +29,7 @@ public final class Basket {
 	{
 		int count = 0;
 		for (Ball ball : balls) {
-			if (ball.GetColor() == Color.BLUE)
+			if (ball.GetColor().equals("blue"))
 				count++;
 		}
 		return count;

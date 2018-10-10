@@ -1,14 +1,12 @@
 package by.bsuir.Kaminsky.task9;
 
-import java.awt.Color;
-
 public final class Ball {
-	private Color color;
+	private String color;
 	private double weigth;
 	
-	public Ball(Color color, double weight)
+	public Ball(String color, double weight)
 	{
-		this.color = color;
+		this.color = color.toLowerCase();
 		this.weigth = weight;
 	}
 	
@@ -17,7 +15,7 @@ public final class Ball {
 		return weigth;
 	}
 	
-	public Color GetColor()
+	public String GetColor()
 	{
 		return color;
 	}	

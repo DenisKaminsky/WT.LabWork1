@@ -34,11 +34,4 @@ public class MatrixGenerator {
 			System.out.println();
 		}
 	}
-	
-	public static void main(String ... args)
-	{
-		double[] arr = new double[] {1,2,3,4,5,6,7};
-		double[][] result = GenerateMatrix(arr);
-		PrintMatrix(result);
-	}
 }

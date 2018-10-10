@@ -23,9 +23,4 @@ public class MaxIncreasingSequence {
 		}
 		return min;
 	}
-	
-	public static void main(String ... args){
-		int[] mass = new int[] {6,5,4,3,2,1};
-		System.out.println(FindMinCountExtraItems(mass));
-	}	
 }
