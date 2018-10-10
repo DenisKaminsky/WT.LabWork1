@@ -28,8 +28,7 @@ public class Book implements Comparable<Book>,Cloneable{
     
     public void setIsbn(int isbn){ this.isbn = isbn; }
     
-	public Book(String title,String author, int price, int isbn)
-	{
+	public Book(String title,String author, int price, int isbn) {
 		this.title = title;
 		this.author = author;
 		this.price = price;
@@ -41,8 +40,7 @@ public class Book implements Comparable<Book>,Cloneable{
     }
 	
 	@Override
-	public Book clone()
-	{
+	public Book clone()	{
 		try {
             return (Book)super.clone();
         }
@@ -52,8 +50,7 @@ public class Book implements Comparable<Book>,Cloneable{
 	}
 	
 	@Override
-	public int hashCode()
-	{
+	public int hashCode() {
 		final int primeNumber = 23;
 	    int result = 1;
 	    result = primeNumber * result + price; 
@@ -63,8 +60,7 @@ public class Book implements Comparable<Book>,Cloneable{
 	}
 	
 	@Override
-	public boolean equals(Object obj) 
-	{
+	public boolean equals(Object obj) {
 		if (obj == this) 
 			return true;
 		if (obj == null || obj.getClass() != this.getClass())
@@ -76,8 +72,7 @@ public class Book implements Comparable<Book>,Cloneable{
 	}
 	
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return  "Class: " + getClass().getName()+
                 ", title: " + title +
                 ", author: " + author +

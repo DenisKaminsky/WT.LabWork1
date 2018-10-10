@@ -14,16 +14,14 @@ public class ProgrammerBook extends Book{
 	
 	public void setLanguage(String language){ this.language = language; }
 	
-	public ProgrammerBook(String title,String author, int price,int isbn,String language,int level) 
-	{
+	public ProgrammerBook(String title,String author, int price,int isbn,String language,int level)	{
 		super(title, author, price,isbn);
 		this.language = language;
 		this.level = level;		
 	}
 	
 	@Override
-	public int hashCode()
-	{
+	public int hashCode() {
 		final int primeNumber = 23;
 	    int result = super.hashCode();
 	    result = primeNumber * result + level; 
@@ -32,8 +30,7 @@ public class ProgrammerBook extends Book{
 	}
 	
 	@Override
-	public boolean equals(Object obj) 
-	{
+	public boolean equals(Object obj) {
 		if (obj == this) 
 			return true;
 		if (obj == null || obj.getClass() != this.getClass())

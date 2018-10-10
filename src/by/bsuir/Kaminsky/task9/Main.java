@@ -13,8 +13,7 @@ public class Main {
 		Basket basket = new Basket(count);
 		String color;
 		double weight;
-		while (!basket.IsFull())
-		{
+		while (!basket.IsFull()) {
 			System.out.print("Input color: ");
 			color = ConsoleReader.GetString();
 			System.out.print("Input weight: ");

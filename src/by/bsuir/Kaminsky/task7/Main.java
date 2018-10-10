@@ -9,15 +9,13 @@ public class Main {
 		System.out.println("Input array: ");
 		double[] array = ConsoleReader.GetDoubleArray(count);
 		System.out.println("Original array: ");
-		for (int i = 0; i< array.length;i++)
-		{
+		for (int i = 0; i< array.length;i++) {
 			System.out.print(array[i]+" ");
 		}
 		System.out.println();
 		System.out.println("Sorted array: ");
 		array = ShellSort.Sort(array);
-		for (int i = 0; i< array.length;i++)
-		{
+		for (int i = 0; i< array.length;i++) {
 			System.out.print(array[i]+" ");
 		}
 		//{32,95,16,82,24,66,35,19,75,54,40,43,93};

@@ -4,8 +4,7 @@ import by.bsuir.Kaminsky.task12.Book;
 import reader.ConsoleReader;
 
 public class CloneExample {
-	public static void main(String... args)
-	{
+	public static void main(String... args)	{
 		System.out.println("Book1: ");
 		System.out.print("Input title: ");
 		String title = ConsoleReader.GetString();

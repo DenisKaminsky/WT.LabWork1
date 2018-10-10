@@ -6,8 +6,7 @@ import by.bsuir.Kaminsky.task12.Book;
 import reader.ConsoleReader;
 
 public class Main {
-	public static void main(String... args)
-	{
+	public static void main(String... args)	{
 		ArrayList<Book> books = new ArrayList<Book>();
 		for (int i = 0; i < 3; i++) {
 			System.out.println("Book"+(i+1)+": ");
@@ -21,7 +20,7 @@ public class Main {
 			Integer isbn = ConsoleReader.GetPostitveInteger();
 			books.add(new Book(title,author,price,isbn));
 			System.out.println();
-			}		
+		}		
 		
 		books.sort(null);
 		for (Book book : books) {

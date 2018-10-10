@@ -4,8 +4,7 @@ import by.bsuir.Kaminsky.task12.Book;
 import reader.ConsoleReader;
 
 public class Main {
-	public static void main(String... args)
-	{
+	public static void main(String... args)	{
 		Book[] books = new Book[2];
 		for (int i = 0; i < 2; i++) {
 			System.out.println("ProgrammerBook"+(i+1)+": ");
@@ -23,7 +22,7 @@ public class Main {
 			Integer level = ConsoleReader.GetPostitveInteger();
 			books[i] = new ProgrammerBook(title,author,price,isbn,language,level);
 			System.out.println();
-			}		
+		}		
 		
 		System.out.println("Your books: ");
 		System.out.println(books[0].toString());

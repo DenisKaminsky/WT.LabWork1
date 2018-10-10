@@ -3,8 +3,8 @@ package by.bsuir.Kaminsky.task4;
 import java.util.ArrayList;
 
 public class PrimeNumbersVerifier {
-	private static boolean IsPrime(int number)
-	{
+	
+	private static boolean IsPrime(int number) {
 		if (number < 2)
 			return false;
 		
@@ -17,8 +17,7 @@ public class PrimeNumbersVerifier {
         return true;
 	}
 	
-	public static ArrayList<Integer> FindPrimeNumberIndex(int[] mass)
-	{
+	public static ArrayList<Integer> FindPrimeNumberIndex(int[] mass) {
 		ArrayList<Integer> result = new ArrayList<>();
         for (int i = 0; i < mass.length; i++){
             if (IsPrime(mass[i])){

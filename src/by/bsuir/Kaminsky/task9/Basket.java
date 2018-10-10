@@ -6,18 +6,16 @@ public final class Basket {
 	private int capacity;
 	private ArrayList<Ball> balls;
 	
-	public Basket(int capacity)
-	{
+	public Basket(int capacity)	{
 		this.capacity = capacity;
 		balls = new ArrayList<Ball>();
 	}
-	public int GetBallsCount()
-	{
+	
+	public int GetBallsCount() {
 		return balls.size();
 	}
 	
-	public double GetWeight()
-	{
+	public double GetWeight() {
 		double weight = 0;
 		for (Ball ball : balls) {
 			weight+=ball.GetWeight();
@@ -25,8 +23,7 @@ public final class Basket {
 		return weight;
 	}
 	
-	public int GetBlueBallsCount()
-	{
+	public int GetBlueBallsCount() {
 		int count = 0;
 		for (Ball ball : balls) {
 			if (ball.GetColor().equals("blue"))
@@ -35,17 +32,14 @@ public final class Basket {
 		return count;
 	}
 	
-	public boolean IsFull()
-	{
+	public boolean IsFull()	{
 		if (balls.size() == capacity)
 			return true;
 		return false;
 	}
 	
-	public boolean Add(Ball ball)
-	{
-		if (ball != null && !IsFull())
-		{
+	public boolean Add(Ball ball) {
+		if (ball != null && !IsFull()) {
 			balls.add(ball);
 			return true;
 		}
