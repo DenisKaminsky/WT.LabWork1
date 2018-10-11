@@ -8,10 +8,12 @@ class ExpressionCalculatorTest {
 
 	@Test
 	void CalculateTest() {
-		assertEquals(0.5, ExpressionCalculator.Calculate(0, 0));
-        assertEquals(-0.5, ExpressionCalculator.Calculate(-1, 1));
-        double expected = (1.0/(7 - 10.0/626)) + 5;
-        assertEquals(expected, ExpressionCalculator.Calculate(5, -5));
+		double expected;
+		
+		assertEquals(0.5, ExpressionCalculator.calculate(0, 0));
+        assertEquals(-0.5, ExpressionCalculator.calculate(-1, 1));
+        expected = (1.0/(7 - 10.0/626)) + 5;
+        assertEquals(expected, ExpressionCalculator.calculate(5, -5));
 	}
 
 }

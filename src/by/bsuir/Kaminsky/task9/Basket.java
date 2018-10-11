@@ -11,35 +11,37 @@ public final class Basket {
 		balls = new ArrayList<Ball>();
 	}
 	
-	public int GetBallsCount() {
+	public int getBallsCount() {
 		return balls.size();
 	}
 	
-	public double GetWeight() {
+	public double getWeight() {
 		double weight = 0;
+		
 		for (Ball ball : balls) {
-			weight+=ball.GetWeight();
+			weight+=ball.getWeight();
 		}
 		return weight;
 	}
 	
-	public int GetBlueBallsCount() {
+	public int getBlueBallsCount() {
 		int count = 0;
+		
 		for (Ball ball : balls) {
-			if (ball.GetColor().equals("blue"))
+			if (ball.getColor().equals("blue"))
 				count++;
 		}
 		return count;
 	}
 	
-	public boolean IsFull()	{
+	public boolean isFull()	{
 		if (balls.size() == capacity)
 			return true;
 		return false;
 	}
 	
-	public boolean Add(Ball ball) {
-		if (ball != null && !IsFull()) {
+	public boolean add(Ball ball) {
+		if (ball != null && !isFull()) {
 			balls.add(ball);
 			return true;
 		}

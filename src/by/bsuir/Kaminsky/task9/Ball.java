@@ -9,11 +9,11 @@ public final class Ball {
 		this.weigth = weight;
 	}
 	
-	public double GetWeight() {
+	public double getWeight() {
 		return weigth;
 	}
 	
-	public String GetColor() {
+	public String getColor() {
 		return color;
 	}	
 }

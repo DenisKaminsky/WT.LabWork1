@@ -1,7 +1,8 @@
 package by.bsuir.Kaminsky.task6;
 
 public class MatrixGenerator {
-	public static double[][] GenerateMatrix(double[] array)	{
+	
+	public static double[][] generateMatrix(double[] array)	{
 		int size = array.length;
 		double[][] result = new double[size][size];		
 		int counter = 0;
@@ -16,9 +17,10 @@ public class MatrixGenerator {
 		return result;
 	}
 	
-	public static void PrintMatrix(double[][] array) {
+	public static void printMatrix(double[][] array) {
 		int width = array.length;
 		int height = 0;
+		
 		if (width != 0)
 			height = array[0].length;
 		for (int i = 0; i< height; i++)	{

@@ -8,11 +8,11 @@ class AreaIdentifierTest {
 
 	@Test
 	void IsBelongAreaTest() {
-		assertTrue(AreaIdentifier.IsBelongArea(0,0));
-        assertTrue(AreaIdentifier.IsBelongArea(3,4));
-        assertTrue(AreaIdentifier.IsBelongArea(4,-3));
-        assertFalse(AreaIdentifier.IsBelongArea(-5,1));
-        assertFalse(AreaIdentifier.IsBelongArea(2,-4));
-        assertFalse(AreaIdentifier.IsBelongArea(-1,6));
+		assertTrue(AreaIdentifier.isBelongArea(0,0));
+        assertTrue(AreaIdentifier.isBelongArea(3,4));
+        assertTrue(AreaIdentifier.isBelongArea(4,-3));
+        assertFalse(AreaIdentifier.isBelongArea(-5,1));
+        assertFalse(AreaIdentifier.isBelongArea(2,-4));
+        assertFalse(AreaIdentifier.isBelongArea(-1,6));
 	}
 }

@@ -4,12 +4,16 @@ import reader.ConsoleReader;
 
 public class Main {
 	public static void main(String ... args){
+		int count;
+		double[] array;
+		double[][] result;
+		
 		System.out.print("Input array numbers count: ");
-		int count = ConsoleReader.GetPostitveInteger();
+		count = ConsoleReader.getPostitveInteger();
 		System.out.println("Input array: ");
-		double[] array = ConsoleReader.GetDoubleArray(count);
+		array = ConsoleReader.getDoubleArray(count);
 		System.out.println("Matrix: ");
-		double[][] result = MatrixGenerator.GenerateMatrix(array);
-		MatrixGenerator.PrintMatrix(result);
+		result = MatrixGenerator.generateMatrix(array);
+		MatrixGenerator.printMatrix(result);
 	}
 }

@@ -5,16 +5,19 @@ import java.util.Map;
 import reader.ConsoleReader;
 
 public class Main {
-	public static void main(String ... args){	
-        
+	public static void main(String ... args){        
+		double a,b,h;
+		Map<Double, Double> map;
+		int count;
+		
 		System.out.print("Input begin value: ");
-		double a = ConsoleReader.GetDouble();
+		a = ConsoleReader.getDouble();
 		System.out.print("Input end value: ");
-		double b = ConsoleReader.GetDouble();
+		b = ConsoleReader.getDouble();
 		System.out.print("Input step: ");
-		double h = ConsoleReader.GetDouble();
-		Map<Double, Double> map = FunctionValuesOnSegmentCalculator.CalculateValuesOnSegment(a,b,h);
-        int count =  map.size();
+		h = ConsoleReader.getDouble();
+		map = FunctionValuesOnSegmentCalculator.calculateValuesOnSegment(a,b,h);
+        count =  map.size();
         for (int i = 0; i<count;i++)
         	System.out.println(map.values().toArray()[i]);		
 	}

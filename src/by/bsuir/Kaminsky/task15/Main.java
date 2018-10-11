@@ -9,6 +9,7 @@ public class Main {
 
 	private static ArrayList<Comparator<Book>> getComparators() {
         ArrayList<Comparator<Book>> comparators = new ArrayList<>();
+        
         comparators.add(new BookAuthorAndTitleComparator());
         comparators.add(new BookAuthorComparator());
         comparators.add(new BookAuthorTitlePriceComparator());
@@ -20,22 +21,26 @@ public class Main {
 	
 	public static void main(String... args)	{
 		ArrayList<Book> books = new ArrayList<Book>();
+		ArrayList<Comparator<Book>> comparators;
+		String title,author;
+		Integer price,isbn;
+		
 		for (int i = 0; i < 3; i++) {
 			System.out.println("Book"+(i+1)+": ");
 			System.out.print("Input title: ");
-			String title = ConsoleReader.GetString();
+			title = ConsoleReader.getString();
 			System.out.print("Input author: ");
-			String author = ConsoleReader.GetString();
+			author = ConsoleReader.getString();
 			System.out.print("Input price: ");
-			Integer price = ConsoleReader.GetPostitveInteger();
+			price = ConsoleReader.getPostitveInteger();
 			System.out.print("Input serial number(isbn): ");
-			Integer isbn = ConsoleReader.GetPostitveInteger();
+			isbn = ConsoleReader.getPostitveInteger();
+			ConsoleReader.fflush();	
 			books.add(new Book(title,author,price,isbn));
 			System.out.println();
 		}	
 		
-		ArrayList<Comparator<Book>> comparators = getComparators();
-		
+		comparators = getComparators();		
 		for (Comparator<Book> comparator : comparators) {
             books.sort(comparator);
             System.out.println("Comparator: "+comparator.toString());

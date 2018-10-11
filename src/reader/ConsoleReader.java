@@ -6,44 +6,51 @@ public class ConsoleReader {
 	
 	private static Scanner in = new Scanner(System.in);
 	
-	public static double GetDouble() {
+	public static double getDouble() {
 		while (!in.hasNextDouble()) {
 			in.next();			
 		}
 		return in.nextDouble();
 	}
 	
-	public static int GetInteger()	{
+	public static int getInteger()	{
 		while (!in.hasNextInt())  {
 			in.next();
 		}
 		return in.nextInt();
 	}
 	
-	public static int GetPostitveInteger()	{
+	public static void fflush() {
+		in.nextLine();
+	}
+	
+	public static int getPostitveInteger()	{
 		int num;
+		
 		do {
-			num = GetInteger();
+			num = getInteger();
 		}while (num < 0);
 		return num;
 	}
 	
-	public static String GetString() {
-		return in.next();
+	public static String getString() {
+		return in.nextLine();
 	}
 	
-	public static int[] GetIntegerArray(int count)	{
+	public static int[] getIntegerArray(int count)	{
 		int[] array = new int[count];
+		
 		for (int i = 0; i < count; i++) {
-			array[i]= GetInteger();
+			array[i]= getInteger();
 		}
 		return array;
 	}
 	
-	public static double[] GetDoubleArray(int count) {
+	public static double[] getDoubleArray(int count) {
 		double[] array = new double[count];
+		
 		for (int i = 0; i < count; i++) {
-			array[i]= GetDouble();
+			array[i]= getDouble();
 		}
 		return array;
 	}

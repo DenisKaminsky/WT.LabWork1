@@ -7,6 +7,7 @@ public class SequencesLinker {
 	public static ArrayList<Integer> joinSequences(int [] seqA, int [] seqB){
         ArrayList<Integer> indexes = new ArrayList<>();
         int j = 0;
+        
         for (int i = 0; i < seqB.length; i++){
             while (j < seqA.length){
                 if (seqA[j] <= seqB[i]){

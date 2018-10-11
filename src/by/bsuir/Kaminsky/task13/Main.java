@@ -4,22 +4,27 @@ import by.bsuir.Kaminsky.task12.Book;
 import reader.ConsoleReader;
 
 public class Main {
+	
 	public static void main(String... args)	{
 		Book[] books = new Book[2];
+		String title,author,language;
+		Integer price,isbn,level;
+		
 		for (int i = 0; i < 2; i++) {
 			System.out.println("ProgrammerBook"+(i+1)+": ");
 			System.out.print("Input title: ");
-			String title = ConsoleReader.GetString();
+			title = ConsoleReader.getString();
 			System.out.print("Input author: ");
-			String author = ConsoleReader.GetString();
-			System.out.print("Input price: ");
-			Integer price = ConsoleReader.GetPostitveInteger();
-			System.out.print("Input serial number(isbn): ");
-			Integer isbn = ConsoleReader.GetPostitveInteger();		
+			author = ConsoleReader.getString();
 			System.out.print("Input language: ");
-			String language = ConsoleReader.GetString();			
+			language = ConsoleReader.getString();
+			System.out.print("Input price: ");
+			price = ConsoleReader.getPostitveInteger();
+			System.out.print("Input serial number(isbn): ");
+			isbn = ConsoleReader.getPostitveInteger();		
 			System.out.print("Input level: ");
-			Integer level = ConsoleReader.GetPostitveInteger();
+			level = ConsoleReader.getPostitveInteger();
+			ConsoleReader.fflush();	
 			books[i] = new ProgrammerBook(title,author,price,isbn,language,level);
 			System.out.println();
 		}		

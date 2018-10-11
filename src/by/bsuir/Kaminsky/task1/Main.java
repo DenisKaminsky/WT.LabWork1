@@ -5,10 +5,12 @@ import reader.ConsoleReader;
 public class Main {
 	
 	public static void main(String ... args){
+		double x,y;
+		
 		System.out.print("Input x: ");
-		double x = ConsoleReader.GetDouble();
+		x = ConsoleReader.getDouble();
 		System.out.print("Input y: ");
-		double y = ConsoleReader.GetDouble();
-		System.out.println("Result = "+ExpressionCalculator.Calculate(x, y));
+		y = ConsoleReader.getDouble();
+		System.out.println("Result = "+ExpressionCalculator.calculate(x, y));
 	}
 }

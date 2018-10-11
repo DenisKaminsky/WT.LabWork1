@@ -13,7 +13,7 @@ class MatrixGeneratorTest {
 	@Test
 	void EmptyArrayTest() {
 		array = new double[] {};
-		actual = MatrixGenerator.GenerateMatrix(array);
+		actual = MatrixGenerator.generateMatrix(array);
 		assertEquals(0,actual.length);
 	}
 	
@@ -21,7 +21,7 @@ class MatrixGeneratorTest {
 	void SingleElementTest() {
 		array = new double[] {1};
 		expected = new double[][] { {1} };
-		actual = MatrixGenerator.GenerateMatrix(array);
+		actual = MatrixGenerator.generateMatrix(array);
 		assertEquals(1,actual.length);
 		assertEquals(1,actual[0].length);
 		assertArrayEquals(expected, actual);
@@ -31,7 +31,7 @@ class MatrixGeneratorTest {
 	void MultipleElementsTest() {
 		array = new double[] {1,2,3,4,5};
 		expected = new double[][] { {1,2,3,4,5} , {2,3,4,5,1} , {3,4,5,1,2} , {4,5,1,2,3} , {5,1,2,3,4} };
-		actual = MatrixGenerator.GenerateMatrix(array);
+		actual = MatrixGenerator.generateMatrix(array);
 		assertEquals(5,actual.length);
 		assertEquals(5,actual[0].length);
 		assertArrayEquals(expected, actual);		

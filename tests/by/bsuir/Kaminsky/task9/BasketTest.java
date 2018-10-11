@@ -13,23 +13,23 @@ class BasketTest {
 	void GetWeightTest()
 	{
 		basket = new Basket(4);
-		basket.Add(new Ball("blue", 13.3f));
-		basket.Add(new Ball("red", 20));
-		basket.Add(new Ball("green", 30));
-		assertTrue(Math.abs(basket.GetWeight()-63.3)<= 0.01);
+		basket.add(new Ball("blue", 13.3f));
+		basket.add(new Ball("red", 20));
+		basket.add(new Ball("green", 30));
+		assertTrue(Math.abs(basket.getWeight()-63.3)<= 0.01);
 	}
 	
 	@Test
 	void GetBlueBallsCountTest()
 	{
 		basket = new Basket(6);
-		basket.Add(new Ball("blue", 10));
-		basket.Add(new Ball("red", 50));
-		basket.Add(new Ball("green", 20));
-		basket.Add(new Ball("blue", 17));
-		basket.Add(new Ball("blue", 24));
-		basket.Add(new Ball("red", 12));
-		assertEquals(3, basket.GetBlueBallsCount());
+		basket.add(new Ball("blue", 10));
+		basket.add(new Ball("red", 50));
+		basket.add(new Ball("green", 20));
+		basket.add(new Ball("blue", 17));
+		basket.add(new Ball("blue", 24));
+		basket.add(new Ball("red", 12));
+		assertEquals(3, basket.getBlueBallsCount());
 	}
 	
 	@Test
@@ -37,21 +37,21 @@ class BasketTest {
 	{
 		basket = new Basket(3);
 		for (int i = 0; i < 5; i++) {
-			basket.Add(new Ball("red", 5));
+			basket.add(new Ball("red", 5));
 		}
-		assertEquals(3, basket.GetBallsCount());
-		assertTrue(basket.IsFull());
+		assertEquals(3, basket.getBallsCount());
+		assertTrue(basket.isFull());
 	}
 	
 	@Test
 	void NullPointerTest()
 	{
 		basket = new Basket(3);
-		basket.Add(null);
-		basket.Add(new Ball("red", 50));
-		basket.Add(new Ball("green", 40));
-		assertEquals(2, basket.GetBallsCount());
-		assertFalse(basket.IsFull());
+		basket.add(null);
+		basket.add(new Ball("red", 50));
+		basket.add(new Ball("green", 40));
+		assertEquals(2, basket.getBallsCount());
+		assertFalse(basket.isFull());
 	}
 
 }

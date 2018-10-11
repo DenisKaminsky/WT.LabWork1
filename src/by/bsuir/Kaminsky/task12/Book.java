@@ -7,34 +7,54 @@ public class Book implements Comparable<Book>,Cloneable{
     private int price;
     private int isbn;
     private static int edition = 3;
- 
-    public String getTitle(){ return title; }
     
-    public void setTitle(String tiltle){ this.title = tiltle; } 
-    
-    public String getAuthor(){ return author; }   
-    
-    public void setAuthor(String author){ this.author = author; }   
-    
-    public int getPrice(){ return price; }
-    
-    public void setPrice(int price){ this.price = price; }
-    
-    public static int getEdition(){ return edition; }
-    
-    public static void setEdition(int edition){ Book.edition = edition; }
-    
-    public int getIsbn(){ return isbn; }
-    
-    public void setIsbn(int isbn){ this.isbn = isbn; }
-    
-	public Book(String title,String author, int price, int isbn) {
+    public Book(String title,String author, int price, int isbn) {
 		this.title = title;
 		this.author = author;
 		this.price = price;
 		this.isbn = isbn;
 	}
-	
+ 
+    public String getTitle() { 
+    	return title; 
+    }
+    
+    public void setTitle(String tiltle) { 
+    	this.title = tiltle; 
+    } 
+    
+    public String getAuthor() { 
+    	return author; 
+    }   
+    
+    public void setAuthor(String author) { 
+    	this.author = author; 
+    }   
+    
+    public int getPrice() { 
+    	return price; 
+    }
+    
+    public void setPrice(int price) { 
+    	this.price = price; 
+    }
+    
+    public static int getEdition() { 
+    	return edition; 
+    }
+    
+    public static void setEdition(int edition) { 
+    	Book.edition = edition; 
+    }
+    
+    public int getIsbn() { 
+    	return isbn; 
+    }
+    
+    public void setIsbn(int isbn) { 
+    	this.isbn = isbn; 
+    }
+    	
 	public int compareTo(Book book){
 	    return isbn - book.getIsbn();        
     }
@@ -53,6 +73,7 @@ public class Book implements Comparable<Book>,Cloneable{
 	public int hashCode() {
 		final int primeNumber = 23;
 	    int result = 1;
+	    
 	    result = primeNumber * result + price; 
 	    result = primeNumber * result + ((title == null) ? 0 : title.hashCode());             
 	    result = primeNumber * result + ((author == null) ? 0 : author.hashCode()); 
@@ -61,11 +82,13 @@ public class Book implements Comparable<Book>,Cloneable{
 	
 	@Override
 	public boolean equals(Object obj) {
+		Book book;
+		
 		if (obj == this) 
 			return true;
 		if (obj == null || obj.getClass() != this.getClass())
             return false;
-		Book book = (Book) obj;
+		book = (Book)obj;
         return (price == book.price) && (title == book.title ||
             (title != null && title.equals(book.getTitle())))
                 && (author == book.author || (author != null && author.equals(book.getAuthor())));

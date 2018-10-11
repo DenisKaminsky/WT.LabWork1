@@ -5,19 +5,23 @@ import reader.ConsoleReader;
 
 public class CloneExample {
 	public static void main(String... args)	{
+		Book book,book2;
+		String title,author;
+		Integer price,isbn;
+		
 		System.out.println("Book1: ");
 		System.out.print("Input title: ");
-		String title = ConsoleReader.GetString();
+		title = ConsoleReader.getString();
 		System.out.print("Input author: ");
-		String author = ConsoleReader.GetString();
+		author = ConsoleReader.getString();
 		System.out.print("Input price: ");
-		Integer price = ConsoleReader.GetPostitveInteger();
+		price = ConsoleReader.getPostitveInteger();
 		System.out.print("Input serial number(isbn): ");
-		Integer isbn = ConsoleReader.GetPostitveInteger();		
-		Book book = new Book(title,author,price,isbn);
+		isbn = ConsoleReader.getPostitveInteger();		
+		book = new Book(title,author,price,isbn);
 		System.out.println();
 		
-		Book book2 = book.clone();
+		book2 = book.clone();
 		System.out.println(book.toString());
 		System.out.println("Hash: "+book.hashCode());		
 		System.out.println(book2.toString());
